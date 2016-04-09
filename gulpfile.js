@@ -24,17 +24,16 @@ var gulp            = require('gulp'),
       css:  'app/**/*.css',
       js: 'app/js/**/*.js',
       jade: 'app/markups/**/*.jade',
-      jadeSrc: 'app/markups/*.jade',
+      jadeSrc: 'app/markups/_pages/*.jade',
       jadeDest: 'app/',
-      scss: 'app/scss/**/*.scss',
-      sassSrc: 'app/scss/main.scss',
+      sassSrc: 'app/scss/**/*.scss',
       sassDest: 'app/css/',
       browserifySrc: './app/js/entry.js',
       browserifyDest:'./app/js/',
       sprite: {
         spritesSrc: 'app/img/icons/*.png',
         spriteImgDest: './app/img/',
-        spriteStylesDest: './app/scss/_layout/' 
+        spriteStylesDest: './app/scss/_layout/'
       },
       build: {
         cssoSrc: 'build/css/main.css',
@@ -84,8 +83,10 @@ gulp.task('sprites', function() {
             cssOpts: {functions: false},
             padding: 20
           }));
-  spriteData.img.pipe(gulp.dest(path.sprite.spriteImgDest)); // path where to save the sprite-img
-  spriteData.css.pipe(gulp.dest(path.sprite.spriteStylesDest)); // path where to save the styles
+  var imgDest = spriteData.img.pipe(gulp.dest(path.sprite.spriteImgDest)); // path where to save the sprite-img
+  var cssDest = spriteData.css.pipe(rename({prefix: "_"}))
+                .pipe(gulp.dest(path.sprite.spriteStylesDest)); // path where to save the styles
+  return merge(imgDest, cssDest);
 });
 
 // =============================================
@@ -178,7 +179,7 @@ gulp.task('serve', function() {
     server: "app/"
   });
 
-  browserSync.watch(['./app/**/*.js', './app/**/*.html', '!**/*.scss'], browserSync.reload);
+  browserSync.watch(['./app/**/*.js', './app/**/*.html', '!**/*.scss', './app/img/icons/'], browserSync.reload);
 });
 
 // =============================================
@@ -186,9 +187,9 @@ gulp.task('serve', function() {
 // =============================================
 gulp.task('watch', function() {
   gulp.watch(path.jade, gulp.series('jade'));
-  gulp.watch(path.scss, gulp.series('sass'));
-  gulp.watch(path.spritesSrc, gulp.series('sprites'));
+  gulp.watch(path.sassSrc, gulp.series('sass'));
   gulp.watch(path.js, gulp.series('scripts', 'lint'));
+  gulp.watch(path.sprite.spritesSrc, gulp.parallel('sprites'));
 });
 
 // =============================================

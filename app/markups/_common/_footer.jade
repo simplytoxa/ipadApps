@@ -1,0 +1,29 @@
+footer.footer
+	.container
+		.footer__top
+			.footer__blockqoute
+				blockquote(cite="http://www.twitter.com").footer__blockquote-text.
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				.footer__blockcquote-source - versions of Lorem Ipsum.
+		.footer__bottom
+			.footer__wrap
+				.news
+					.footer__headers Newsletter
+					.news__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae soluta nulla at numquam deserunt sapiente iure rerum magnam, esse provident!
+					form(name="footerForm").footer__form
+						input(type="text" placeholder="enter your email address").footer__form-input
+						button(type="submit").footer__form-submit Subscribe
+				.contact
+					.footer__headers Contact form
+					form(name="contact").footer__form
+						.contact__data
+							.contact__inputs-wrap
+								- var placeholders = ['Name', 'Email', 'Phone number']
+									each item in placeholders
+										input(type="text" placeholder="#{item}").footer__form-input.contact__input
+							textarea(name="textarea", placeholder="Message").contact__textarea
+			button(type="submit" form="contact").footer__form-submit.contact__submit Submit
+			.socials
+					-var socials = {twitter:'https://twitter.com', facebook:'https://www.facebook.com/', linkedin:'https://www.linkedin.com/'}
+					+socials(socials)
+			.footer__copyright &copy 2016. All rights reserved. Please don't copy this page.

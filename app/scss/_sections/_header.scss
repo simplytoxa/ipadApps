@@ -1,0 +1,54 @@
+.header {
+  height: 93px;
+  @extend %clearfix;
+}
+.logo{
+  margin: 37px 0 0 0;
+  display: inline-block;
+  float: left;
+}
+.logo__link{
+  display: block;
+}
+.logo-img{
+  display: block;
+}
+.menu{
+  margin: 58px 0 0 150px;
+  display: inline-block;
+  float: left;
+}
+.menu__list{
+  font-size: 0;
+}
+.menu__item{
+  display: inline-block;
+  margin-left: 35px;
+
+  &:first-child{
+    margin-left: 0;
+  }
+}
+.menu__link{
+  display: block;
+  text-decoration: none;
+  font-family: "colaborate-mediumregular";
+  @include font-size(17);
+  font-weight: 300;
+  color: #d7d7e3;
+
+  &:hover{
+   color: shade(#d7d7e3, 15%);
+  }
+}
+
+.menu__link_active{
+  color: #161628;
+  padding: 5px 15px;
+  background-color: #fff;
+  @include border-radius(5px);
+
+  &:hover{
+    color: tint(#161628, 70%);
+  }
+}
