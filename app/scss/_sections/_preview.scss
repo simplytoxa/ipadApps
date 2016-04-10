@@ -1,0 +1,81 @@
+.preview{
+	@extend %clearfix;
+	padding: 0 146px 0 119px;
+}
+.preview__left{
+	display: inline-block;
+	max-width: 230px;
+	float: left;
+	@extend %clearfix;
+}
+.preview__title{
+	color: #e7e8ea;
+	text-align: right;
+	@extend %clearfix;
+	margin-bottom: 34px;
+}
+.preview__title1{
+	font-family: "chunkfiveroman";
+	@include font-size(45);
+	font-weight: 400;
+	line-height: 52px;
+	text-transform: uppercase;
+}
+.preview__title2{
+	color: #d7d7e3;
+	font-family: "alexandriaflfregular";
+	@include font-size(39);
+	line-height: 52px;
+	font-weight: 400;
+}
+.preview__title3{
+	@extend .preview__title2;
+	font-family: "alexandriaflfbold";
+	font-weight: 700;
+}
+.preview__title4{
+	color: #e7e8ea;
+	font-family: "colaborate-thinregular";
+	@include font-size(23);
+	font-weight: 100;
+	max-width: 180px;
+	display: inline-block;
+}
+.preview__btn{
+	display: inline-block;
+	background-image: -webkit-linear-gradient(bottom, #164182 0%, #2d6bc2 100%);
+	background-image: -o-linear-gradient(bottom, #164182 0%, #2d6bc2 100%);
+	background-image: linear-gradient(to top, #164182 0%, #2d6bc2 100%);
+	border: 1px solid #6e9ad8;
+	@include border-radius(5px);
+	float: right;
+	position: relative;
+	overflow: hidden;
+	
+	&:after{
+		content: "";
+		@include abs-pos($bottom: -41px, $left: 0);
+		@include sprite($shadow-btn);
+	}
+}
+.preview__link{
+	padding: 11px 35px;
+	display: block;
+	color: white;
+	font-family: "colaborate-mediumregular";
+	@include font-size(23);
+	font-weight: 500;
+	line-height: 23px;
+	
+	&:hover{
+		color: shade(white, 20%);
+		background-image: linear-gradient(to top, #165599 0%, #2d6bc2 100%);
+	}
+}
+.preview__right{
+	display: inline-block;
+	float: right;
+}
+.preview__image{
+
+}

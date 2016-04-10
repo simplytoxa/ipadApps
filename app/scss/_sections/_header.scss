@@ -1,5 +1,6 @@
 .header {
-  height: 93px;
+  min-height: 93px;
+  margin-bottom: 57px;
   @extend %clearfix;
 }
 .logo{
@@ -38,7 +39,7 @@
   color: #d7d7e3;
 
   &:hover{
-   color: shade(#d7d7e3, 15%);
+   color: shade(#d7d7e3, 20%);
   }
 }
 
