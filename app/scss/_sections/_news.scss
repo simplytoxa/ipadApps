@@ -1,0 +1,32 @@
+.news-slider{
+
+}
+.news-slider__list{
+	font-size: 0;
+}
+.news-slider__item{
+	width: 548px;
+	height: 42px;
+	font-family: Contra;
+	@include font-size(16);
+	font-weight: 400;
+	line-height: 25px;
+	color: #828181;
+	margin: 0 auto;
+}
+.news-slider__controls{
+
+}
+.news-slider__controls-btn{
+
+}
+.news-slider__controls-btn_prev{
+
+}
+.news-slider__controls-btn_next{
+
+}
+
+.active{
+	z-index: 1;
+}

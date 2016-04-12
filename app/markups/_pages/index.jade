@@ -1,19 +1,68 @@
 extends ../main
 
 block title
-	| Home page
+  | Home page
 
 block content
-	main.content
-		.container
-			.preview
-				.preview__left
-					.preview__title 
-						.preview__title1 DUBLIN'S
-						.preview__title2 iPad 
-							span.preview__title3 Apps
-						.preview__title4 Free and paid apps for your iPad
-					.preview__btn
-						a(href="#").preview__link Read More
-				.preview__right
-					img(src="./img/ipad.png", alt="iPad").preview__image
+  main.main
+    .container
+      // PREVIEW
+      section.preview
+        .preview__left
+          .preview__title 
+            .preview__title1 DUBLIN'S
+            .preview__title2 iPad 
+              span.preview__title3 Apps
+            .preview__title4 Free and paid apps for your iPad
+          .preview__btn
+            a(href="#").preview__link Read More
+        .preview__right
+          img(src="./img/ipad.png", alt="iPad").preview__image
+      // CONTENT
+      section.content
+        .boxes
+          ul.boxes__list
+            li.boxes__item
+              a.boxes__link(href="#")
+                .boxes__wrap
+                  i.boxes__icon
+                  img.boxes__img.boxes__img_right(src="./img/boxes-ipad.png", alt="iPad")
+                span.boxes__title E Book Reader pro
+            li.boxes__item
+              a.boxes__link(href="#")
+                img.boxes__img(src="./img/boxes-ipad2.png", alt="iPad")
+                span.boxes__title Image viewer pro
+            li.boxes__item
+              a.boxes__link(href="#")
+                img.boxes__img(src="./img/media.png", alt="media")
+                span.boxes__title Media mannager
+            li.boxes__item
+              a.boxes__link(href="#")
+                i.boxes__ribban
+                img.boxes__img(src="./img/brick.png", alt="brick")
+                span.boxes__title Leo Entertainment
+        .category
+          ul.category__list
+            li.category__item
+              .category__wrap.category__discover
+                h2.category__title Discover Apps
+                .category__subtitle Lorem ipsum is simply dummy
+              p.category__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odio neque minima veritatis earum fuga facere ipsum fugit. Fugiat, corporis.
+            li.category__item
+              .category__wrap.category__browse
+                h2.category__title Browse Apps
+                .category__subtitle Lorem ipsum is simply dummy
+              p.category__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim deleniti eaque accusamus autem qui, molestias! Amet voluptates tempore molestias ea.
+            li.category__item
+              .category__wrap.category__dev
+                h2.category__title Development
+                .category__subtitle Lorem ipsum is simply dummy
+              p.category__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ratione omnis dolore quod explicabo a ipsa quos atque esse. Quae.
+        .news-slider
+          ul.news-slider__list
+            li.news-slider__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius molestias aspernatur pariatur in inventore quaerat, officiis modi molestiae, itaque ullam!
+            li.news-slider__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quia quaerat repellendus natus totam quisquam nulla magnam, veritatis. Voluptates, esse.
+            li.news-slider__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet facere quisquam ipsum voluptate voluptatum similique obcaecati odit quae in ad!
+          .news-slider__controls
+            a(href="#").news-slider__controls-btn.news-slider__controls-btn_prev
+            a(href="#").news-slider__controls-btn.news-slider__controls-btn_next

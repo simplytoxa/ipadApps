@@ -42,15 +42,6 @@ The `sprites` mixin generates identical output to the CSS template
 // =============================================
 // === My mixins
 // =============================================
-@mixin absolute-center(){
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  margin: auto;
-}
 
 /**
  * Box-sizing mixin

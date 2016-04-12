@@ -1,0 +1,57 @@
+.content{
+
+}
+.boxes{
+  margin-bottom: 48px;
+}
+.boxes__list{
+  font-size: 0;
+}
+.boxes__item{
+  display: inline-block;
+  width: 239px;
+  height: 155px;
+  background-image: linear-gradient(to top, #e4e3e4 0%, #faf9f9 100%);
+  border: 3px solid white;
+  @include border-radius(5px);
+  box-shadow: 0 0 10px rgba(50, 50, 50, 0.11);
+  position: relative;
+  @extend %clearfix;
+  margin-left: 14px;
+
+  &:first-child{
+    margin-left: 0;
+  }
+}
+.boxes__link{
+  display: block;
+  height: 100%;
+}
+.boxes__wrap{
+  @extend %clearfix;
+}
+.boxes__icon{
+  @include sprite($e);
+  @include abs-pos($left: 20px, $top: 19px);
+}
+.boxes__img{
+  @extend %absolute-center;
+}
+.boxes__img_right{
+  float: right;
+  position: static;
+  margin-top: 8px;
+}
+.boxes__title{
+  text-shadow: 0.5px 0.9px 0 rgba(255, 255, 255, 0.75);
+  color: #8c8c92;
+  font-family: Calibri;
+  @include font-size(19);
+  font-weight: 400;
+  display: block;
+  @include abs-pos($bottom: 0, $left: 20%);
+}
+.boxes__ribban{
+  @include sprite($new-ribban);
+  @include abs-pos($right: -3px, $top: -4px);
+}
