@@ -1,1 +1,1 @@
-var exampleModule = require('./_modules/exampleModule.js');
+var homePage = require('./_modules/homePage.js');

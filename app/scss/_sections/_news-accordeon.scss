@@ -1,0 +1,14 @@
+.news-accordeon__text{
+	display: none;
+}
+.news-accordeon__item{
+	border-top: 1px solid #d7d8da;
+	border-bottom: 1px solid #d7d8da;
+	
+}
+.news-accordeon__trigger{
+	@extend .product__item;
+	display: block;
+	line-height: 35;
+}
+
