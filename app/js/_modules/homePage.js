@@ -48,17 +48,17 @@
 
     list.css('left', '-=' + reqPos + 'px');
 
+    function removeActiveClass(slide) {
+      slide.addClass('active')
+           .siblings()
+           .removeClass('active');
+    };
+
+    function findReqPos(slide) {
+      reqPos = slide.offset().left - sliderOffset;
+    }
   };
 
-  function removeActiveClass(slide) {
-    slide.addClass('active')
-                 .siblings()
-                 .removeClass('active');
-  };
-
-  function findReqPos(slide) {
-    reqPos = slide.offset().left - sliderOffset;
-  }
 
   function publicMethod() {
     exampleModule = {
