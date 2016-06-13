@@ -116,7 +116,7 @@
 	@extend .menu__link_active;
 	color: #363648;
 	font-family: 'colaborate-regularregular';
-	@extend font-size(14);
+	@include font-size(14);
 	font-weight: 300;
 	line-height: 20px;
 	outline: none;

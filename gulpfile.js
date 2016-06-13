@@ -12,7 +12,6 @@ var gulp            = require('gulp'),
     autoprefixer    = require('autoprefixer'),
     postcss         = require('gulp-postcss'),
     notify          = require("gulp-notify"),
-    rename          = require("gulp-rename"),
     csso            = require('gulp-csso'),
     del             = require('del'),
     uglify          = require('gulp-uglify'),
@@ -22,7 +21,7 @@ var gulp            = require('gulp'),
     path = {
       html: 'app/*.html',
       css:  'app/**/*.css',
-      js: 'app/js/**/*.js',
+      js: 'app/js/_modules/*.js',
       jade: 'app/markups/**/*.jade',
       jadeSrc: 'app/markups/_pages/*.jade',
       jadeDest: 'app/',
@@ -48,7 +47,7 @@ var gulp            = require('gulp'),
 gulp.task('jade', function() {
   var YOUR_LOCALS = {};
  
-  gulp.src(path.jadeSrc)
+  return gulp.src(path.jadeSrc)
       .pipe(jade({
         locals: YOUR_LOCALS,
         pretty: '\t'
@@ -60,7 +59,7 @@ gulp.task('jade', function() {
 // === Sass
 // =============================================
 gulp.task('sass', function() {
-  gulp.src(path.sassSrc)
+  return gulp.src(path.sassSrc)
       .pipe(sourcemaps.init())
       .pipe(sassGlob())
       .pipe(sass()).on('error', notify.onError())
@@ -94,7 +93,7 @@ gulp.task('sprites', function() {
 // =============================================
 gulp.task('lint', function() {
     
-    return gulp.src(['**/*.js','!node_modules/**'])
+    return gulp.src(['./js/**/*.js','!node_modules/**'])
         .pipe(eslint()) 
         .pipe(eslint.format()) 
         .pipe(eslint.failAfterError());
@@ -118,10 +117,9 @@ gulp.task('minifyCss', function() {
   return gulp.src(path.build.cssoSrc)
       .pipe(csso({
           restructure: false,
-          sourceMap: true,
+          sourceMap: false,
           debug: true
       }))
-      .pipe(rename({suffix: ".min"}))
       .pipe(gulp.dest('./build/css/'));
 });
 
@@ -140,7 +138,7 @@ gulp.task('clean', function () {
 // === Browserify JS
 // =============================================
 gulp.task('scripts', function() {
-  gulp.src(path.browserifySrc)
+  return gulp.src(path.browserifySrc)
 
       .pipe(browserify({
         debug : true // Maps
@@ -155,7 +153,6 @@ gulp.task('scripts', function() {
 gulp.task('js:compress', function() {
   return gulp.src(path.build.compressedSrc)
     .pipe(uglify())
-    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest(path.build.compressedJS));
 });
 
@@ -195,7 +192,7 @@ gulp.task('watch', function() {
 // =============================================
 // === Default
 // =============================================
-gulp.task('default', gulp.parallel('serve', 'watch'));
+gulp.task('default', gulp.series('jade', 'sass', 'scripts', 'sprites', gulp.parallel('watch', 'serve')));
 
 
 

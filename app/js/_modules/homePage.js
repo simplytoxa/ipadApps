@@ -51,8 +51,8 @@
 
     function removeActiveClass(slide) {
       slide.addClass('active')
-                   .siblings()
-                   .removeClass('active');
+           .siblings()
+           .removeClass('active');
     };
 
     function findReqPos(slide) {
@@ -82,6 +82,7 @@
       item.removeClass('active');
     }
   };
+
 
   function publicMethod() {
     exampleModule = {
