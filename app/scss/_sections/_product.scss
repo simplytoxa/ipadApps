@@ -1,6 +1,7 @@
 .product{
 	position: relative;
 	@extend %clearfix;
+	margin-bottom: 46px;
 }
 .product__img-wrap{
 	display: inline-block;

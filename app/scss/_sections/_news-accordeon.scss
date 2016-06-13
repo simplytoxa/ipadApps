@@ -1,14 +1,36 @@
-.news-accordeon__text{
-	display: none;
+.news-accordeon{
+	margin-bottom: 32px;
 }
+
+.news-accordeon__trigger{
+	color: #828181;
+	font-family: 'colaboratelightregular';
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 35px;
+	display: block;
+	position: relative;
+
+	&:before{
+		content: "";
+		@include sprite($plus);
+		@include abs-pos($right: calc(100% + 11px), $top: 8px);
+	}
+}
+
 .news-accordeon__item{
 	border-top: 1px solid #d7d8da;
 	border-bottom: 1px solid #d7d8da;
+	min-height: 37px;
 	
+	.news-accordeon__text{
+		color: #828181;
+		font-family: 'colaboratelightregular';
+		font-size: 15px;
+		font-weight: 300;
+		line-height: 35px;
+		display: block;
+		display: none;
+		line-height: 35px;
+	}
 }
-.news-accordeon__trigger{
-	@extend .product__item;
-	display: block;
-	line-height: 35;
-}
-

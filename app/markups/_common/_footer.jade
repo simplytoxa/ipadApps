@@ -15,7 +15,7 @@ footer.footer
 						button(type="submit").footer__form-submit Subscribe
 				.contact
 					.footer__headers Contact form
-					form(name="contact").footer__form
+					form(name="contact" id="contact").footer__form
 						.contact__data
 							.contact__inputs-wrap
 								- var placeholders = ['Name', 'Email', 'Phone number']
@@ -26,4 +26,4 @@ footer.footer
 			.socials
 					-var socials = {twitter:'https://twitter.com', facebook:'https://www.facebook.com/', linkedin:'https://www.linkedin.com/'}
 					+socials(socials)
-			.footer__copyright &copy 2016. All rights reserved. Please don't copy this page.
+			.footer__copyright &copy; 2016. All rights reserved. Please don't copy this page.

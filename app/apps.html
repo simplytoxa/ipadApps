@@ -1,87 +1,105 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bower CSS-->
-	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-	<!-- CSS-->
-	<link rel="stylesheet" href="css/main.css"><!--[if lt IE 9]>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
-	<title>
-	</title>
-</head>
-<body>
-	<!--[if lt IE 7]>
-	<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
-	<![endif]-->
-	<header class="header">
-		<div class="container">
-			<div class="logo"><a href="#" class="logo__link"> 
-					<h1 class="text-hide">Dublin Apps. Ipad applications</h1><img src="img/logo.png" alt="logo" class="logo-img"></a></div>
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__item"><a href="#" class="menu__link menu__link_active">Home</a>
-					</li>
-					<li class="menu__item"><a href="#" class="menu__link">ipad apps</a>
-					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Demonstrarions</a>
-					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Leopards media</a>
-					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Connect us</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__top">
-				<div class="footer__blockqoute">
-					<blockquote cite="http://www.twitter.com" class="footer__blockquote-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</blockquote>
-					<div class="footer__blockcquote-source">- versions of Lorem Ipsum.</div>
-				</div>
-			</div>
-			<div class="footer__bottom">
-				<div class="footer__wrap">
-					<div class="news">
-						<div class="footer__headers">Newsletter</div>
-						<div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae soluta nulla at numquam deserunt sapiente iure rerum magnam, esse provident!</div>
-						<form name="footerForm" class="footer__form">
-							<input type="text" placeholder="enter your email address" class="footer__form-input">
-							<button type="submit" class="footer__form-submit">Subscribe</button>
-						</form>
-					</div>
-					<div class="contact">
-						<div class="footer__headers">Contact form</div>
-						<form name="contact" class="footer__form">
-							<div class="contact__data">
-								<div class="contact__inputs-wrap">
-									<input type="text" placeholder="Name" class="footer__form-input contact__input">
-									<input type="text" placeholder="Email" class="footer__form-input contact__input">
-									<input type="text" placeholder="Phone number" class="footer__form-input contact__input">
-								</div>
-								<textarea name="textarea" placeholder="Message" class="contact__textarea"></textarea>
-							</div>
-						</form>
-					</div>
-				</div>
-				<button type="submit" form="contact" class="footer__form-submit contact__submit">Submit</button>
-				<div class="socials">
-					<ul class="socials__list">
-						<li class="socials__item"><a href="https://twitter.com" target="_blank" class="socials__link_twitter socials__link"></a><span class="text-hide">twitter</span></li>
-						<li class="socials__item"><a href="https://www.facebook.com/" target="_blank" class="socials__link_facebook socials__link"></a><span class="text-hide">facebook</span></li>
-						<li class="socials__item"><a href="https://www.linkedin.com/" target="_blank" class="socials__link_linkedin socials__link"></a><span class="text-hide">linkedin</span></li>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" sizes="57x57" href="./favicon.ico/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./favicon.ico/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./favicon.ico/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./favicon.ico/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./favicon.ico/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./favicon.ico/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./favicon.ico/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./favicon.ico/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./favicon.ico/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="./favicon.ico/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="./favicon.ico/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico/favicon-16x16.png">
+		<link rel="manifest" href="./favicon.ico/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="./favicon.ico/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Bower CSS-->
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<!-- CSS-->
+		<link rel="stylesheet" href="css/main.css"><!--[if lt IE 9]>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+		<title>
+		</title>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+		<![endif]-->
+		<header class="header">
+			<div class="container">
+				<div class="logo"><a href="#" class="logo__link"> 
+						<h1 class="text-hide">Dublin Apps. Ipad applications</h1><img src="img/logo.png" alt="logo" class="logo-img"></a></div>
+				<nav class="menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#" class="menu__link menu__link_active">Home</a>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">ipad apps</a>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Demonstrarions</a>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Leopards media</a>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Connect us</a>
+						</li>
 					</ul>
-				</div>
-				<div class="footer__copyright">&copy 2016. All rights reserved. Please don't copy this page.</div>
+				</nav>
 			</div>
-		</div>
-	</footer>
-	<!-- JS-->
-	<script src="./bower/jquery/dist/jquery.min.js"></script>
-	<script src="./js/bundle.js"></script>
-</body>
+		</header>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__blockqoute">
+						<blockquote cite="http://www.twitter.com" class="footer__blockquote-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</blockquote>
+						<div class="footer__blockcquote-source">- versions of Lorem Ipsum.</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__wrap">
+						<div class="news">
+							<div class="footer__headers">Newsletter</div>
+							<div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae soluta nulla at numquam deserunt sapiente iure rerum magnam, esse provident!</div>
+							<form name="footerForm" class="footer__form">
+								<input type="text" placeholder="enter your email address" class="footer__form-input">
+								<button type="submit" class="footer__form-submit">Subscribe</button>
+							</form>
+						</div>
+						<div class="contact">
+							<div class="footer__headers">Contact form</div>
+							<form name="contact" id="contact" class="footer__form">
+								<div class="contact__data">
+									<div class="contact__inputs-wrap">
+										<input type="text" placeholder="Name" class="footer__form-input contact__input">
+										<input type="text" placeholder="Email" class="footer__form-input contact__input">
+										<input type="text" placeholder="Phone number" class="footer__form-input contact__input">
+									</div>
+									<textarea name="textarea" placeholder="Message" class="contact__textarea"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
+					<button type="submit" form="contact" class="footer__form-submit contact__submit">Submit</button>
+					<div class="socials">
+						<ul class="socials__list">
+							<li class="socials__item"><a href="https://twitter.com" target="_blank" class="socials__link_twitter socials__link"></a><span class="text-hide">twitter</span></li>
+							<li class="socials__item"><a href="https://www.facebook.com/" target="_blank" class="socials__link_facebook socials__link"></a><span class="text-hide">facebook</span></li>
+							<li class="socials__item"><a href="https://www.linkedin.com/" target="_blank" class="socials__link_linkedin socials__link"></a><span class="text-hide">linkedin</span></li>
+						</ul>
+					</div>
+					<div class="footer__copyright">&copy; 2016. All rights reserved. Please don't copy this page.</div>
+				</div>
+			</div>
+		</footer>
+		<!-- JS-->
+		<script src="./bower/jquery/dist/jquery.min.js"></script>
+		<script src="./js/bundle.min.js"></script>
+	</body>
+</html>
